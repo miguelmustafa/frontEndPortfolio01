@@ -1,0 +1,137 @@
+:root {
+    --gray: rgb(52, 58, 64);
+    --white: rgb(253, 253, 253);
+    --colorfooter: rgb(30,79,109);
+}
+
+#logo {
+    height: 50px;
+}
+
+.bg-dark {
+    background-color: var(--gray) !important;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+.linkBuyTicket {
+    color: green;
+}
+
+.presentacion {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    margin: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+
+}
+
+.encabezado p,
+h2 {
+    text-align: right;
+    color: var(--white);
+}
+
+header {
+    background-image: url('./assets/img/ba1.jpg');
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+
+.card-oradores {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.h6 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: .65rem;
+    margin-top: .8rem;
+}
+
+.h3 {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1.1;
+}
+
+.batext {
+    background-color: var(--gray);
+    color: var(--white);
+    border-left: 1px solid var(--white)
+}
+
+.baimg {    
+    min-width: 100%;
+    min-height: 100%;
+    width: 100%;
+    height: auto;
+}
+
+.batext h4 {
+    margin-top: 1rem;
+
+}
+
+.formulario {
+    padding: 0 3rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+  }
+
+.formulario > p {
+    text-align: center;
+}
+
+.formulario p > a {
+    text-decoration: dotted underline;
+    color: black;
+    /* color: black;
+    border-bottom: 2px dotted;
+    text-decoration: none; */
+}
+
+form {
+    text-align: center;
+  }
+
+  
+.textcharla {
+    display: block;
+    font-size: .5rem;
+    text-align: left;
+    color: grey;
+  }
+
+  footer {
+    background-color: var(--colorfooter);
+  }
+
+  footer li {
+    list-style: none;
+  }
+
+  footer li a {
+    text-decoration: none;
+    color: var(--white);
+  }
+
+  footer ul {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;  
+  }
