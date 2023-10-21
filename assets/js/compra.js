@@ -1,6 +1,7 @@
 const categoria = document.getElementById('categoria');
 const resultado = document.getElementById('total');
 const resumenBtn = document.getElementById('resumen');
+const borrarFormulario = document.getElementById('borrarFormulario');
 const formularioCompra = document.getElementById('formularioCompra');
 const formularioOrador = document.getElementById('formularioOrador');
 
@@ -9,6 +10,7 @@ let categoriaText = '';
 let descuento = 0;
 
 resumenBtn.addEventListener('click', calculaTicket);
+borrarFormulario.addEventListener('click', resetFormularioCompra);
 formularioCompra.addEventListener('submit', function (e) {
     e.preventDefault();
 })
@@ -32,10 +34,21 @@ document.getElementById('categoria').addEventListener('change', function (x) {
     calculaTicket();
 })
 
-function categoriaChange(e) {
+function resetFormularioCompra(){
+    cantidad = 0;
+    limpiaActiveCard();
+    formularioCompra.reset();    
+    calculaTicket();
+}
+
+function limpiaActiveCard(){
     document.querySelectorAll('.compra .card').forEach((x) => {
         x.classList.remove('activecard');
     })
+}
+
+function categoriaChange(e) {
+    limpiaActiveCard();
     const cardSeleccionada = document.getElementById(e.currentTarget.id);
     cardSeleccionada.classList.add('activecard');
     categoria.value = cardSeleccionada.id;
@@ -47,7 +60,11 @@ function calculaTicket() {
 
     let totalpago = 0;
     if (cantidad === 0)
+    {
+        resultado.textContent = `Total a pagar: $ `;
         return;
+    }
+        
 
     if (categoriaText === 'estudiante') {
         descuento = 0.8;
