@@ -1,7 +1,7 @@
 :root {
     --gray: rgb(52, 58, 64);
     --white: rgb(253, 253, 253);
-    --colorfooter: rgb(30,79,109);
+    --colorfooter: rgb(30, 79, 109);
 }
 
 #logo {
@@ -55,7 +55,7 @@ header {
 .btngreen {
     background-color: #97C93E;
     border: #97C93E;
-    color:white
+    color: white
 }
 
 .h6 {
@@ -78,7 +78,7 @@ header {
     border-left: 1px solid var(--white)
 }
 
-.baimg {    
+.baimg {
     min-width: 100%;
     min-height: 100%;
     width: 100%;
@@ -96,13 +96,13 @@ header {
     flex-direction: column;
     align-items: center;
     margin: auto;
-  }
+}
 
-.formulario > p {
+.formulario>p {
     text-align: center;
 }
 
-.formulario p > a {
+.formulario p>a {
     text-decoration: dotted underline;
     color: black;
     /* color: black;
@@ -112,88 +112,86 @@ header {
 
 form {
     text-align: center;
-  }
+}
 
-  
+
 .textcharla {
     display: block;
     font-size: .5rem;
     text-align: left;
     color: grey;
-  }
+}
 
-  .compra {
+.compra {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     padding: 0px;
-    
 
-  }
 
-  .compra div {
+}
+
+.compra div {
     margin: 2px;
     width: 100%;
-    height: 100%;    
-  }
+    height: 100%;
+}
 
 
-  .card-body > p.card-text:nth-child(3) {
+.card-body>p.card-text:nth-child(3) {
     font-weight: bold;
-  }
+}
 
-  .compra > div.card:nth-child(1){
+.compra>div.card:nth-child(1) {
     border-color: #007BFE;
-  }
+}
 
-  .compra > div.card:nth-child(2){
+.compra>div.card:nth-child(2) {
     border-color: #049CB4;
-  }
+}
 
-  .compra > div.card:nth-child(3){
+.compra>div.card:nth-child(3) {
     border-color: #FFBF00;
-  }
+}
 
-  .compra .card {
+.compra .card {
     cursor: pointer;
-  }
+}
 
-  .activecard {
+.activecard {
     border: 3px solid;
-  }
+}
 
-  footer {
+footer {
     background-color: var(--colorfooter);
-  }
+}
 
-  footer li {
+footer li {
     list-style: none;
-  }
+}
 
-  footer li a {
+footer li a {
     text-decoration: none;
     color: var(--white);
-  }
+}
 
-  #total {
+#total {
     background-color: #CCE5FF;
     padding: 0.7rem 1rem;
-  }
+}
 
-  footer ul {
+footer ul {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    gap: 1.5rem;  
-  }
+    gap: 1.5rem;
+}
 
-  @media (max-width:768px){
+@media (max-width:768px) {
     .compra {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         padding: 0px;
     }
-  }
-
-  
+}
