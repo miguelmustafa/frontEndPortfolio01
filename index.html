@@ -143,7 +143,7 @@
         <h6 class="h6">conviértete en un</h6>
         <h3 class="h3">orador</h3>
         <p>Anótate como orador para dar una <a href="#">charla ignite</a>. Cuéntanos de qué quieres hablar!</p>
-        <form method="POST" action="">
+        <form method="POST" action="" id="formularioOrador">
             <div class="row">
                 <div class="col-md-3 mb-3"></div>
                 <div class="col-md-3 mb-3">
@@ -174,12 +174,112 @@
 
             <div class="row">
                 <div class="col-md-3"></div>
-                <div class="col-md-6 mb-3 d-grid gap-2">
-                    <input class="btn btn-success " id="submit" type="submit" value="Enviar" />
+                <div class="col-md-6 mb-3 d-grid gap-2">                    
+                    <button class="btn btngreen">Enviar</button>
                 </div>
                 <div class="col-md-3 mb-3"></div>
             </div>
         </form>
+    </section>
+
+    <section class=" container-fluid row mx-0 p-0" id="compra">
+      
+            <div class="col-md-3"></div>            
+            <div class="col-md-6">
+
+            <div class="compra">                
+                
+                    <div class="card text-center" id="estudiante" onclick="categoriaChange(event)">
+                        <div class="card-body">
+                          <h5 class="card-title">Estudiante</h5>
+                          <p class="card-text">Tienen un descuento</p>
+                          <p class="card-text">80%</p>
+                          <p class="card-text">* presentar documentación</p>
+                        </div>
+                      </div>                               
+            
+                    <div class="card text-center" id="trainee" onclick="categoriaChange(event)">
+                        <div class="card-body">
+                          <h5 class="card-title">Trainee</h5>
+                          <p class="card-text">Tienen un descuento</p>
+                          <p class="card-text">50%</p>
+                          <p class="card-text">* presentar documentación</p>
+                        </div>
+                      </div> 
+
+                    <div class="card text-center" id="junior" onclick="categoriaChange(event)">
+                        <div class="card-body">
+                          <h5 class="card-title">Junior</h5>
+                          <p class="card-text">Tienen un descuento</p>
+                          <p class="card-text">15%</p>
+                          <p class="card-text">* presentar documentación</p>
+                        </div>
+                      </div>                 
+                
+            </div>
+            <div class="div row">
+                <div class="col text-center">
+                    <h6>VENTA </h6>
+                    <h3>VALOR DEL TICKET $200</h3>                
+
+                </div>
+             
+            </div>
+            </div>                
+            <div class="col-md-3"></div>  
+            
+            <form method="POST" action="" id="formularioCompra">
+                <div class="row">
+                    <div class="col-md-3 mb-3"></div>
+                    <div class="col-md-3 mb-3">
+                        <input class="form-control" type="text" name="nombre" id="nombre" placeholder="Nombre" required />
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <input class="form-control" type="text" name="apellido" id="apellido" placeholder="Apellido"
+                            required />
+                    </div>
+                    <div class="col-md-3"></div>
+                    <div class="col-md-3"></div>
+                    <div class="col-md-6 mb-1">
+                      <input class="form-control" type="email" name="email" id="email" placeholder="Correo" required />
+                    </div>
+                    <div class="col-md-3"></div>
+                    <div class="col-md-3 mb-3"></div>
+                    <div class="col-md-3 mb-3 text-start">
+                        <label class="form-label" for="cantidad">Cantidad</label>
+                        <input class="form-control" type="number" min="0" name="cantidad" id="cantidad" placeholder="Cantidad" required />
+                    </div>
+                    <div class="col-md-3 mb-3 text-start">
+                        <label class="form-label" for="categoria">Categoria</label>
+                        <select class="form-control" name="categoria" id="categoria" placeholder="Categoría" required>
+                            <option value="estudiante">Estudiante</option>
+                            <option value="trainee">Trainee</option>
+                            <option value="junior">Junior</option>
+                          </select>
+                    </div>
+                    <div class="col-md-3"></div>
+                    <div class="col-md-3"></div>
+                    <div class="col-md-6 mb-1 text-start">
+                        <p class="total" id="total">Total a pagar: $</p>
+                      </div>
+                    
+
+    
+                </div>   
+    
+
+                <div class="row">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-3 mb-3 d-grid gap-2">                        
+                        <button class="btn btngreen">Borrar</button>
+                    </div>
+                    <div class="col-md-3 mb-3 d-grid gap-2">
+                        <button class="btn btngreen" id="resumen">Resumen</button>
+                    </div>
+                    <div class="col-md-3 mb-3"></div>
+                </div>
+            </form>
+
     </section>
 
     <footer class="container-fluid py-4">
@@ -202,7 +302,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
-        
+
     <script src="./assets/js/compra.js"></script>
 
 </body>

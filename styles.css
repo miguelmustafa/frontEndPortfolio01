@@ -52,6 +52,12 @@ header {
     margin-bottom: 1rem;
 }
 
+.btngreen {
+    background-color: #97C93E;
+    border: #97C93E;
+    color:white
+}
+
 .h6 {
     text-align: center;
     text-transform: uppercase;
@@ -116,6 +122,46 @@ form {
     color: grey;
   }
 
+  .compra {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0px;
+    
+
+  }
+
+  .compra div {
+    margin: 2px;
+    width: 100%;
+    height: 100%;    
+  }
+
+
+  .card-body > p.card-text:nth-child(3) {
+    font-weight: bold;
+  }
+
+  .compra > div.card:nth-child(1){
+    border-color: #007BFE;
+  }
+
+  .compra > div.card:nth-child(2){
+    border-color: #049CB4;
+  }
+
+  .compra > div.card:nth-child(3){
+    border-color: #FFBF00;
+  }
+
+  .compra .card {
+    cursor: pointer;
+  }
+
+  .activecard {
+    border: 3px solid;
+  }
+
   footer {
     background-color: var(--colorfooter);
   }
@@ -129,9 +175,25 @@ form {
     color: var(--white);
   }
 
+  #total {
+    background-color: #CCE5FF;
+    padding: 0.7rem 1rem;
+  }
+
   footer ul {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     gap: 1.5rem;  
   }
+
+  @media (max-width:768px){
+    .compra {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 0px;
+    }
+  }
+
+  
