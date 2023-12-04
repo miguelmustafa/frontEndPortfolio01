@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="styles.css" rel="stylesheet">
+    <title>Oradores</title>
+
+</head>
+<body>
+    
+    <menu class="container-fluid m-auto p-0">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="./assets/img/codoacodo.png" alt="" class="d-inline-block" id="logo">
+                    Conf Bs As</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/index.html">Home</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </menu>
+        <form method="POST" action="" id="formAltaOrador" class="mb-5">
+            <div class="row">
+                <h3 class="">Anótate como orador. Cuéntanos de qué quieres hablar!</h3>
+                <div class="col-md-3 mb-3"></div>
+                <div class="col-md-2 mb-3">
+                    <input class="form-control" type="text" name="nombre" id="nombre" placeholder="Nombre" required />
+                </div>
+                <div class="col-md-2 mb-3">
+                    <input class="form-control" type="text" name="apellido" id="apellido" placeholder="Apellido"
+                        required />
+                </div>
+                <div class="col-md-2 mb-3">
+                    <input class="form-control" type="email" name="mail" id="mail" placeholder="Email"
+                        required />
+                </div>
+                <div class="col-md-3"></div>
+                <div class="col-md-3"></div>
+                <div class="col-md-6 mb-1">
+                    <textarea class="form-control" name="tema" id="tema"
+                        placeholder="Sobre qué quieres hablar?"></textarea>
+                </div>
+                <div class="col-md-3"></div>
+
+            </div>
+
+
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-6 mb-3">
+                    <span class="textcharla">Recuerda incluir un título para tu charla</span>
+                </div>
+                <div class="col-md-3"></div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-6 mb-3 d-grid gap-2">
+                    <button class="btn btngreen" id="btnSave">Guardar</button>
+                </div>
+                <div class="col-md-3 mb-3"></div>
+            </div>
+        </form>
+        
+        <div class="row">
+            <div class="col" id="tablaOradores">
+                <h3 class="text-center">Lista oradores</h3>
+                
+                <table class="table table-striped" >
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Apellido</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Tema</th>
+                        <th scope="col">Fecha Alta</th>
+                        <th scope="col"></th>
+                      </tr>
+                    </thead>
+                    <tbody id="tbOradores">                     
+                    </tbody>
+                  </table>
+            </div>
+        </div>
+
+
+        <script src="/assets/js/oradores.js"></script>   
+    
+</body>
+</html>

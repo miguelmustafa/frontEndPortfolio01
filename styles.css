@@ -8,6 +8,14 @@
     height: 50px;
 }
 
+#formAltaOrador {
+    padding-top: 150px;
+}
+
+#tablaOradores {
+    padding: 0 2rem;
+}
+
 .bg-dark {
     background-color: var(--gray) !important;
     position: fixed;
