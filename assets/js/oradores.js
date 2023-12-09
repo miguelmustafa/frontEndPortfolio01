@@ -1,6 +1,7 @@
 const formOrador = document.getElementById('formAltaOrador');
 const btnSave = document.getElementById('btnSave');
 const tbOradores = document.getElementById('tbOradores');
+const url = 'http://localhost:8080/wep-app/orador';
 let modoEdicion = false;
 let oradores = [];
 
@@ -26,7 +27,7 @@ const saveOrador = async () => {
         tema
     }
 
-    await fetch('http://localhost:8080/wep-app/orador', {
+    await fetch(url, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -61,7 +62,7 @@ const deleteOrador = (id) => {
     }).then((result) => {
         if (result.isConfirmed) {
 
-            fetch(`http://localhost:8080/wep-app/orador?id=${id}`, {method: 'DELETE'})
+            fetch(`${url}?id=${id}`, { method: 'DELETE' })
                 .then(resp => {
                     tr.remove();
                 })
@@ -78,7 +79,7 @@ const deleteOrador = (id) => {
 
 const updateOrador = async (orador) => {
 
-    return fetch('http://localhost:8080/wep-app/orador', {
+    return fetch(url, {
         method: 'UPDATE',
         headers: {
             'Content-Type': 'application/json',
@@ -106,7 +107,7 @@ const cargaOradores = () => {
 
     tbOradores.innerHTML = '';
 
-    fetch('http://localhost:8080/wep-app/orador',{method: 'GET'}).then(resp =>
+    fetch(url, { method: 'GET' }).then(resp =>
         resp.json()
     ).then(data => {
         //console.log(data);
@@ -157,8 +158,6 @@ function editarOrador(id) {
 
     const btnEditar = fila.querySelector('.btn');
     btnEditar.innerText = 'Guardar';
-    //btnEditar.removeEventListener('click', editarOrador);
-    //btnEditar.addEventListener('click', () => guardarOrador(id));
 }
 
 async function guardarOrador(id) {
@@ -198,8 +197,6 @@ async function guardarOrador(id) {
     btnEditar.innerText = 'Editar';
 
     modoEdicion = false;
-    //btnEditar.removeEventListener('click', guardarOrador);
-    //btnEditar.addEventListener('click', editarOrador.bind(null, id));
 }
 
 cargaOradores();
