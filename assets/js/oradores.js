@@ -78,9 +78,9 @@ const deleteOrador = (id) => {
 
 
 const updateOrador = async (orador) => {
-
+   
     return fetch(url, {
-        method: 'UPDATE',
+        method: 'PUT',
         headers: {
             'Content-Type': 'application/json',
         },
@@ -124,8 +124,8 @@ const cargaOradores = () => {
          <td class="fechaAlta">${x.fechaAlta}</td>         
          <td
          <div> 
-         <button class="btn btn-sm btn-primary" onclick="editarOrador(${x.id})">Editar</button>
-         <button class="btn btn-sm btn-danger" onclick="deleteOrador(${x.id})">Eliminar</button>
+         <button class="btn fa-solid fa-pen-to-square" onclick="editarOrador(${x.id})"></button>
+         <button class="btn fa-solid fa-trash" onclick="deleteOrador(${x.id})"></button>
          </div>
          </td>
          `
@@ -157,7 +157,8 @@ function editarOrador(id) {
     temaElement.contentEditable = true;
 
     const btnEditar = fila.querySelector('.btn');
-    btnEditar.innerText = 'Guardar';
+    btnEditar.classList.remove('fa-solid','fa-pen-to-square');
+    btnEditar.classList.add('fa-solid','fa-floppy-disk');
 }
 
 async function guardarOrador(id) {
@@ -194,8 +195,8 @@ async function guardarOrador(id) {
     }
 
     const btnEditar = fila.querySelector('.btn');
-    btnEditar.innerText = 'Editar';
-
+    btnEditar.classList.remove('fa-solid','fa-floppy-disk');
+    btnEditar.classList.add('fa-solid','fa-pen-to-square');
     modoEdicion = false;
 }
 
